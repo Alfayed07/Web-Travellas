@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/2b86481c1c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/css/style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Search - Trafellas</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="searchPage">
+      <div class="container flight-header">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/">
+              <img src="img/logodark.png" alt="logo Trafellas" />
+            </a>
+          </div>
+          <ul class="links">
+            <li>
+              <a href="/"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li>
+              <a href="flight.html"><i class="fa-solid fa-plane"></i></a>
+            </li>
+            <li>
+              <a href="train.html"><i class="fa-solid fa-train"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-hotel"></i></a>
+            </li>
+          </ul>
+          <div class="user-button">
+            <a href="login.html">
+              <button>Login</button>
+            </a>
+            <a href="register.html">
+              <button>Register</button>
+            </a>
+          </div>
+          <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+        <div class="dropdown">
+          <li>
+            <a href="/">Search</a>
+          </li>
+          <li>
+            <a href="#">Flight</a>
+          </li>
+          <li>
+            <a href="#">Train</a>
+          </li>
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <div class="user-button">
+            <li class="button">
+              <a href="login.html">
+                <button>Login</button>
+              </a>
+            </li>
+            <li class="button">
+              <a href="register.html">
+                <button>Register</button>
+              </a>
+            </li>
+          </div>
+        </div>
+    </header>
+
+    <div class="container searchContainer">
+      <div class="filter">
+        <form action="">
+          <div class="sortTicket">
+            <label for="sort" class="bold">Sort :</label>
+            <select id="sort" name="sort">
+              <option value="high">Highest Price</option>
+              <option value="low">Lowest Price</option>
+              <option value="rate">Rate</option>
+              <option value="popular">Popular</option>
+            </select>
+          </div>
+          <div class="filter-airline">
+            <h2 class="bold">Filter</h2>
+            <hr>
+            <br>
+            <h4 class="bold">Stops</h4>
+            <input type="checkbox" id="stops1" name="stops1" value="Direct">
+            <label for="direct">Direct</label><br>
+            <input type="checkbox" id="stops2" name="stops2" value="1 Transit">
+            <label for="stops2">1 Transit</label><br>
+            <input type="checkbox" id="stops3" name="stops3" value="2 Transit">
+            <label for="stops3">2+ Transit</label><br>
+            <br>
+            <hr>
+            <br>
+            <h4 class="bold">Airline</h4>
+            <input type="checkbox" id="airline1" name="airline1" value="Batik Air">
+            <label for="direct">Batik Air</label><br>
+            <input type="checkbox" id="airline2" name="airline2" value="Citilink">
+            <label for="airline2">Citilink</label><br>
+            <input type="checkbox" id="airline3" name="airline3" value="Garuda Indonesia">
+            <label for="airline3">Garuda Indonesia</label><br>
+            <input type="checkbox" id="airline4" name="airline4" value="Lion Air">
+            <label for="airline4">Lion Air</label><br>
+          </div>
+        </form>
+      </div>
+      <div class="tickets">
+        <div class="destination">
+          <div class="location">
+            <h2 class="bold">Semarang (SRG) &ensp; <i class="fa-solid fa-arrow-right"></i> &ensp; Jakarta (JKTA)</h2>
+            <h4 class="light">Wed, 5 Apr 2023 &ensp; | &ensp; 1 passenger &ensp; | &ensp; Economy</h4>
+          </div>
+          <a href="#">
+            <button><i class="fa-solid fa-magnifying-glass"></i> Change Search</button>
+          </a>
+        </div>
+        <div class="ticket">
+          <h2 class="bold">Lion Air</h2>
+          <div class="ticket-body">
+            <div class="ticket-detail">
+              <img src="img/airline/lionair.webp" alt="">
+              <div class="depart">
+                <h3 class="bold">08:45</h3>
+                <h5 class="light">SRG</h5>
+              </div>
+              <div class="time">
+                <h6>1hr 5m</h6>
+                <hr>
+                <h6>direct</h6>
+              </div>
+              <div class="arive">
+                <h3 class="bold">09:50</h3>
+                <h5 class="light">JKTA</h5>
+              </div>
+            </div>
+            <h2>IDR 607.330/pax</h2>
+          </div>
+          <div class="ticket-footer">
+            <div class="ticket-info">
+              <h4>Price Detail</h4>
+              <h4>Flight Detail</h4>
+              <h4>Policy</h4>
+              <h4><i class="fa-solid fa-suitcase-rolling"></i> 20kg</h4>
+            </div>
+            <a href="order.html">
+              <button>Choose</button>
+            </a>
+          </div>
+        </div>
+        <div class="ticket">
+          <h2 class="bold">Citilink</h2>
+          <div class="ticket-body">
+            <div class="ticket-detail">
+              <img src="img/airline/citilink.webp" alt="">
+              <div class="depart">
+                <h3 class="bold">08:45</h3>
+                <h5 class="light">SRG</h5>
+              </div>
+              <div class="time">
+                <h6>1hr 5m</h6>
+                <hr>
+                <h6>direct</h6>
+              </div>
+              <div class="arive">
+                <h3 class="bold">09:50</h3>
+                <h5 class="light">JKTA</h5>
+              </div>
+            </div>
+            <h2>IDR 711.300/pax</h2>
+          </div>
+          <div class="ticket-footer">
+            <div class="ticket-info">
+              <h4>Price Detail</h4>
+              <h4>Flight Detail</h4>
+              <h4>Policy</h4>
+              <h4><i class="fa-solid fa-suitcase-rolling"></i> 20kg</h4>
+            </div>
+            <a href="#">
+              <button>Choose</button>
+            </a>
+          </div>
+        </div>
+        <div class="ticket">
+          <h2 class="bold">Batik Air</h2>
+          <div class="ticket-body">
+            <div class="ticket-detail">
+              <img src="img/airline/batik.webp" alt="">
+              <div class="depart">
+                <h3 class="bold">08:45</h3>
+                <h5 class="light">SRG</h5>
+              </div>
+              <div class="time">
+                <h6>1hr 5m</h6>
+                <hr>
+                <h6>direct</h6>
+              </div>
+              <div class="arive">
+                <h3 class="bold">09:50</h3>
+                <h5 class="light">JKTA</h5>
+              </div>
+            </div>
+            <h2>IDR 731.830/pax</h2>
+          </div>
+          <div class="ticket-footer">
+            <div class="ticket-info">
+              <h4>Price Detail</h4>
+              <h4>Flight Detail</h4>
+              <h4>Policy</h4>
+              <h4><i class="fa-solid fa-suitcase-rolling"></i> 20kg</h4>
+            </div>
+            <a href="#">
+              <button>Choose</button>
+            </a>
+          </div>
+        </div>
+        <div class="ticket">
+          <h2 class="bold">Garuda Indonesia</h2>
+          <div class="ticket-body">
+            <div class="ticket-detail">
+              <img src="img/airline/garuda.webp" alt="">
+              <div class="depart">
+                <h3 class="bold">08:45</h3>
+                <h5 class="light">SRG</h5>
+              </div>
+              <div class="time">
+                <h6>1hr 5m</h6>
+                <hr>
+                <h6>direct</h6>
+              </div>
+              <div class="arive">
+                <h3 class="bold">09:50</h3>
+                <h5 class="light">JKTA</h5>
+              </div>
+            </div>
+            <h2>IDR 733.160/pax</h2>
+          </div>
+          <div class="ticket-footer">
+            <div class="ticket-info">
+              <h4>Price Detail</h4>
+              <h4>Flight Detail</h4>
+              <h4>Policy</h4>
+              <h4><i class="fa-solid fa-suitcase-rolling"></i> 20kg</h4>
+            </div>
+            <a href="#">
+              <button>Choose</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="text">
+          <img src="img/logo.png" alt="logo" />
+          <h5>
+            Find Your Dream Adventure <br />by Ticket Ordering <br />
+            Easy and Fast Transportation!
+          </h5>
+          <h4>Call Center</h4>
+          <h5>0802 3200 212 <br />(Indonesia Only) <br />+6281 3264 0222</h5>
+        </div>
+        <div class="page">
+          <div class="page1">
+            <h4>Company</h4>
+            <h5>About</h5>
+            <h5>Career</h5>
+            <h5>Partner Help</h5>
+            <h5>Customer Service</h5>
+          </div>
+          <div class="page2">
+            <h4>Product</h4>
+            <h5>Flight</h5>
+            <h5>Train</h5>
+            <h5>Stay</h5>
+          </div>
+          <div class="page3">
+            <h4>Support</h4>
+            <h5>Support Center</h5>
+            <h5>Privacy Statement</h5>
+            <h5>Terms & Condition</h5>
+          </div>
+        </div>
+        <div class="download">
+          <h4>Get Trafellas App</h4>
+          <img src="img/playstore.webp" alt="playstore" />
+          <img src="img/appstore.webp" alt="appstore" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>

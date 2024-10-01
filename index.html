@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/2b86481c1c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/css/style.css" />
+
+    <!-- SwipperJs -->
+    <link rel="stylesheet" href="dist/css/swiper-bundle.min.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Trafellas</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="home">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#">
+              <img src="img/logo.png" alt="logo Trafellas" />
+            </a>
+          </div>
+          <ul class="links">
+            <li>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li>
+              <a href="flight.html"><i class="fa-solid fa-plane"></i></a>
+            </li>
+            <li>
+              <a href="train.html"><i class="fa-solid fa-train"></i></a>
+            </li>
+            <li>
+              <a href="stays.html"><i class="fa-solid fa-hotel"></i></a>
+            </li>
+          </ul>
+          <div class="user-button">
+            <a href="login.html">
+              <button>Login</button>
+            </a>
+            <a href="register.html">
+              <button>Register</button>
+            </a>
+          </div>
+          <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+        <div class="dropdown">
+          <li>
+            <a href="#">Search</a>
+          </li>
+          <li>
+            <a href="flight.html">Flight</a>
+          </li>
+          <li>
+            <a href="#">Train</a>
+          </li>
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <div class="user-button">
+            <li class="button">
+              <a href="login.html">
+                <button>Login</button>
+              </a>
+            </li>
+            <li class="button">
+              <a href="register.html">
+                <button>Register</button>
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="hero">
+          <div class="text">
+            <h1>Where do you want to go?</h1>
+            <h3>Explore unforgettable destinations, places, and experiences</h3>
+          </div>
+          <form action="search.html">
+            <input
+              type="text"
+              name="searchText"
+              id="searchText"
+              placeholder="Find New Experience"
+            />
+            <a href="search.html">
+              <button>
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              </button>
+            </a>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="container">
+        <div class="promo">
+          <h2>Offers</h2>
+          <h4>Promotions, deals, and special offers for you</h4>
+
+          <div class="carousel-content">
+            <div class="carousel-item item1">
+              <h3>Vacation to a dream place</h3>
+              <h5>Find airline tickets at the best price</h5>
+              <button>Search for flights</button>
+            </div>
+            <div class="carousel-item item2">
+              <h3>Worry-free Holiday</h3>
+              <h5>By booking and staying, you can save at least 15%</h5>
+              <button>Find this deals</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="recomendation">
+          <h2>Recomendation Flight Destination</h2>
+          <div class="continent">
+            <button class="active">Asia</button>
+            <button>Europe</button>
+            <button>America</button>
+            <button>Africa</button>
+          </div>
+
+          <i class="fa-solid fa-angle-left carousel-button-left hidden"></i>
+          <i class="fa-solid fa-angle-right carousel-button-right"></i>
+          <div id="carousel" class="carousel">
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel2/img1.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Singapore</h4>
+                  <h5><i class="fa-solid fa-location-dot"></i> Singapore</h5>
+                </div>
+                <h3 class="price">IDR 4.453.260</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel2/img2.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Kyoto</h4>
+                  <h5><i class="fa-solid fa-location-dot"></i> Japan</h5>
+                </div>
+                <h3 class="price">IDR 17.389.250</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel2/img3.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Bali</h4>
+                  <h5><i class="fa-solid fa-location-dot"></i> Indonesia</h5>
+                </div>
+                <h3 class="price">IDR 2.747.980</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel2/img4.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Bangkok</h4>
+                  <h5><i class="fa-solid fa-location-dot"></i> Thailand</h5>
+                </div>
+                <h3 class="price">IDR 8.685.050</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel2/img5.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Beijing</h4>
+                  <h5><i class="fa-solid fa-location-dot"></i> Thailand</h5>
+                </div>
+                <h3 class="price">IDR 9.602.050</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel2/img6.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Dubai</h4>
+                  <h5><i class="fa-solid fa-location-dot"></i> Thailand</h5>
+                </div>
+                <h3 class="price">IDR 14.898.450</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="recomendation recom-vacation">
+          <h2>Explore More Vacation Rentals</h2>
+
+          <i class="fa-solid fa-angle-left carousel-button-left hidden"></i>
+          <i class="fa-solid fa-angle-right carousel-button-right"></i>
+          <div id="carousel" class="carousel">
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel3/img1.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>InterContinental Jakarta Pondok Indah</h4>
+                  <h6>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h6>
+                  <h5>
+                    <i class="fa-solid fa-location-dot"></i> Pondok Indah,
+                    Jakarta
+                  </h5>
+                </div>
+                <h3 class="price">IDR 2.582.260</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel3/img2.jpeg" alt="image carousel" />
+                <div class="text">
+                  <h4>D'Bamboo Suites</h4>
+                  <h6>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h6>
+                  <h5>
+                    <i class="fa-solid fa-location-dot"></i> Kuningan, Jakarta
+                  </h5>
+                </div>
+                <h3 class="price">IDR 212.975.250</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel3/img3.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>EDEN Hotel Kuta Bali</h4>
+                  <h6>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h6>
+                  <h5><i class="fa-solid fa-location-dot"></i> Indonesia</h5>
+                </div>
+                <h3 class="price">IDR 258.250</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel3/img4.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Sahid Raya Hotel & Convention</h4>
+                  <h6>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h6>
+                  <h5>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Yogyakarta
+                  </h5>
+                </div>
+                <h3 class="price">IDR 229.576</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel3/img5.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Bobobox Pods Paskal</h4>
+                  <h6>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h6>
+                  <h5><i class="fa-solid fa-location-dot"></i> Bandung</h5>
+                </div>
+                <h3 class="price">IDR 166.391</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card">
+                <img src="img/carousel3/img6.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>Tentrem Hotel Semarang</h4>
+                  <h6>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </h6>
+                  <h5>
+                    <i class="fa-solid fa-location-dot"></i> Simpang Lima,
+                    Semarang
+                  </h5>
+                </div>
+                <h3 class="price">IDR 1.754.490</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container ticket-container">
+        <div class="text">
+          <img src="img/logo.png" alt="logo" />
+          <h5>
+            Find Your Dream Adventure <br />by Ticket Ordering <br />
+            Easy and Fast Transportation!
+          </h5>
+          <h4>Call Center</h4>
+          <h5>0802 3200 212 <br />(Indonesia Only) <br />+6281 3264 0222</h5>
+        </div>
+        <div class="page">
+          <div class="page1">
+            <h4>Company</h4>
+            <h5>About</h5>
+            <h5>Career</h5>
+            <h5>Partner Help</h5>
+            <h5>Customer Service</h5>
+          </div>
+          <div class="page2">
+            <h4>Product</h4>
+            <h5>Flight</h5>
+            <h5>Train</h5>
+            <h5>Stay</h5>
+          </div>
+          <div class="page3">
+            <h4>Support</h4>
+            <h5>Support Center</h5>
+            <h5>Privacy Statement</h5>
+            <h5>Terms & Condition</h5>
+          </div>
+        </div>
+        <div class="download">
+          <h4>Get Trafellas App</h4>
+          <img src="img/playstore.webp" alt="playstore" />
+          <img src="img/appstore.webp" alt="appstore" />
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="dist/js/swiper-bundle.min.js"></script> -->
+    <script src="dist/js/carousel.js"></script>
+  </body>
+</html>

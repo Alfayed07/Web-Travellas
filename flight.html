@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/2b86481c1c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/css/style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Flight - Trafellas</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="flight">
+      <div class="container flight-header">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/">
+              <img src="img/logo.png" alt="logo Trafellas" />
+            </a>
+          </div>
+          <ul class="links">
+            <li>
+              <a href="../"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-plane"></i></a>
+            </li>
+            <li>
+              <a href="train.html"><i class="fa-solid fa-train"></i></a>
+            </li>
+            <li>
+              <a href="stays.html"><i class="fa-solid fa-hotel"></i></a>
+            </li>
+          </ul>
+          <div class="user-button">
+            <a href="login.html">
+              <button>Login</button>
+            </a>
+            <a href="register.html">
+              <button>Register</button>
+            </a>
+          </div>
+          <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+        <div class="dropdown">
+          <li>
+            <a href="../">Search</a>
+          </li>
+          <li>
+            <a href="#">Flight</a>
+          </li>
+          <li>
+            <a href="#">Train</a>
+          </li>
+          <li>
+            <a href="#">Hotel</a>
+          </li>
+          <div class="user-button">
+            <li class="button">
+              <a href="login.html">
+                <button>Login</button>
+              </a>
+            </li>
+            <li class="button">
+              <a href="register.html">
+                <button>Register</button>
+              </a>
+            </li>
+          </div>
+        </div>
+
+        <div class="hero">
+          <div class="text">
+            <h1>Discover your next dream destination</h1>
+          </div>
+          <div class="card">
+            <form action="/search.html">
+              <div class="header-form">
+                <h4>Find the best flight ticket prices & promos here</h4>
+                <div class="input-trip-type">
+                  <input id="roundTrip" name="radTrip" type="radio" checked />
+                  <label for="roundTrip">Round Trip</label>
+                  <input id="oneWay" name="radTrip" type="radio" />
+                  <label for="oneWay">One Way</label>
+                </div>
+                <hr />
+              </div>
+              <div class="form-flight">
+                <div class="form-top">
+                  <div>
+                    <label for="from">Form</label><br />
+                    <input
+                      type="text"
+                      id="from"
+                      name="from"
+                      placeholder="City or Airport"
+                    />
+                  </div>
+                  <div>
+                    <label for="to">To</label><br />
+                    <input
+                      type="text"
+                      id="to"
+                      name="to"
+                      placeholder="Where to?"
+                    />
+                  </div>
+                  <div>
+                    <label for="depart">Form</label><br />
+                    <input type="date" id="depart" name="depart" />
+                  </div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      name="checkReturn"
+                      id="checkReturn"
+                    />
+                    <label for="return">Return</label><br />
+                    <input type="date" id="return" name="return" />
+                  </div>
+                </div>
+                <br />
+                <div class="form-bottom">
+                  <div>
+                    <label for="passanger">Passanger</label><br />
+                    <input
+                      type="number"
+                      id="passanger"
+                      name="passanger"
+                      min="1"
+                      max="10"
+                      value="1"
+                    />
+                  </div>
+                  <div class="select">
+                    <label for="class">Cabin Class</label><br />
+                    <select name="class" id="class">
+                      <option value="economy">Economy</option>
+                      <option value="business">Business</option>
+                      <option value="First">First</option>
+                    </select>
+                  </div>
+                </div>
+                <hr />
+                <div class="footer-form">
+                  <input type="submit" class="submit" value="Submit" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="container">
+        <section class="flight-recomendation recomendation">
+          <h2>Destination recomendations for you</h2>
+          <h4>Find deals on domestic and international flights</h4>
+          <div class="continent">
+            <button class="active">Domestic</button>
+            <button>International</button>
+          </div>
+
+          <i class="fa-solid fa-angle-left carousel-button-left hidden"></i>
+          <i class="fa-solid fa-angle-right carousel-button-right"></i>
+          <div id="carousel" class="carousel">
+            <div class="carousel-item">
+              <div class="card card-ticket">
+                <img src="img/carousel4/img1.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>
+                    Semarang &nbsp;
+                    <i class="fa-solid fa-arrow-right"></i> &nbsp; Jakarta
+                  </h4>
+                  <div class="card-airline">
+                    <img src="img/airline/lionair.webp" alt="" />
+                    <h5>Lion Air</h5>
+                  </div>
+                  <h5>Economy</h5>
+                </div>
+                <h3 class="price">IDR 607.260</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card card-ticket">
+                <img src="img/carousel4/img2.webp" alt="image carousel" />
+                <div class="text">
+                  <h4>
+                    Semarang &nbsp;
+                    <i class="fa-solid fa-arrow-right"></i> &nbsp; Medan
+                  </h4>
+                  <div class="card-airline">
+                    <img src="img/airline/citilink.webp" alt="" />
+                    <h5>Citylink</h5>
+                  </div>
+                  <h5>Economy</h5>
+                </div>
+                <h3 class="price">IDR 2.770.260</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card card-ticket">
+                <img src="img/carousel4/img3.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>
+                    Semarang &nbsp;
+                    <i class="fa-solid fa-arrow-right"></i> &nbsp; Denpasar
+                  </h4>
+                  <div class="card-airline">
+                    <img src="img/airline/garuda.webp" alt="" />
+                    <h5>Garuda Indonesia</h5>
+                  </div>
+                  <h5>Economy</h5>
+                </div>
+                <h3 class="price">IDR 2.747.260</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card card-ticket">
+                <img src="img/carousel4/img4.png" alt="image carousel" />
+                <div class="text">
+                  <h4>
+                    Semarang &nbsp;
+                    <i class="fa-solid fa-arrow-right"></i> &nbsp; Makasar
+                  </h4>
+                  <div class="card-airline">
+                    <img src="img/airline/lionair.webp" alt="" />
+                    <h5>Lion Air</h5>
+                  </div>
+                  <h5>Economy</h5>
+                </div>
+                <h3 class="price">IDR 4.453.260</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card card-ticket">
+                <img src="img/carousel4/img5.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>
+                    Semarang&nbsp;
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp; Aceh
+                  </h4>
+                  <div class="card-airline">
+                    <img src="img/airline/garuda.webp" alt="" />
+                    <h5>Garuda Indonesia</h5>
+                  </div>
+                  <h5>Economy</h5>
+                </div>
+                <h3 class="price">IDR 3.724.260</h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card card-ticket">
+                <img src="img/carousel4/img1.jpg" alt="image carousel" />
+                <div class="text">
+                  <h4>
+                    Semarang &nbsp;
+                    <i class="fa-solid fa-arrow-right"></i> &nbsp; Jakarta
+                  </h4>
+                  <div class="card-airline">
+                    <img src="img/airline/lionair.webp" alt="" />
+                    <h5>Lion Air</h5>
+                  </div>
+                  <h5>Economy</h5>
+                </div>
+                <h3 class="price">IDR 4.453.260</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="description">
+          <div class="top-description">
+            <div class="text">
+              <h2>Holidays become easier with TRAFELLAS</h2>
+              <h4 class="bold">Book Tickets and Plan Holidays Easier</h4>
+              <h5>
+                Easily Book Tickets and Hotels here! With one click, you can
+                order
+                <br />
+                the flight tickets you need quickly and easily.
+              </h5>
+              <h4 class="bold">Many Airline Options</h4>
+              <h5>
+                There are many choices of airlines with the most complete routes
+                <br />
+                around the world. Leisure and business trips will become more
+                <br />
+                economical and practical
+              </h5>
+            </div>
+            <img src="img/plane/airport.jpeg" alt="airport" />
+          </div>
+          <div class="bottom-description">
+            <img src="img/plane/vacation.jpeg" alt="airport" />
+            <div class="text">
+              <h2>
+                Vacation without worry because there is lots of promos and
+                benefits
+              </h2>
+              <h4 class="bold">More Economical Vacation</h4>
+              <h5>
+                The best promo available for your favorite ticket. Get Discounts
+                <br />
+                The Best Prices to Make Your Holiday Budget More Efficient.
+                <br />
+                Don't Delay Anymore, Enjoy Your Dream Vacation Now.
+              </h5>
+              <h4 class="bold">Many Choice of Payment Methods</h4>
+              <h5>
+                You can choose the method of payment as you wish <br />
+                Easy. Various Payment Options Are Available, Such As Banks
+                <br />
+                Transfers, ATM Transfers, Virtual Accounts (VA), Online Debit
+                Cards, <br />
+                and Credit Cards. The process is very easy and simple! <br />
+              </h5>
+            </div>
+          </div>
+        </section>
+
+        <section class="type">
+          <h3 class="bold">Let's Get To Know The 3 Types Of Flight Classes</h3>
+          <h5>
+            If you are a frequent flyer, you are likely familiar with the
+            different categories of airplane seats. While most people are
+            familiar with economy, business, and first-class seats, But do you
+            know that there are other types of airplane seats?
+          </h5>
+          <h4 class="bold">Economy Class</h4>
+          <h5>
+            Economy class is the most common class. The seats are quite
+            comfortable even though the size of the seats is quite small when
+            compared to other classes. Seats in economy class usually have a
+            distance that is not too wide. In fact, if the seat in front is
+            backed up, it will make the distance with the passenger behind
+            narrow. Some airlines will provide food and drinks for long trips.
+          </h5>
+          <h4 class="bold">Business Class</h4>
+          <h5>
+            Having seats that are more comfortable than economy class, business
+            class seat types, set a slightly higher price. The reason is, the
+            price paid is very comparable to the facilities obtained. For
+            example, in business class, you will get a seat that can be tilted
+            up to 180 degrees. So that it will make passengers feel more
+            comfortable to rest. There are also other facilities such as an LCD
+            screen for entertainment and a power outlet.
+          </h5>
+          <h4 class="bold">First Class</h4>
+          <h5>
+            In terms of price, compared to the other three classes, the first
+            class does have the highest price. A series of facilities that can
+            be obtained when you are in first class include the most comfortable
+            seats, wide sizes, and there are barriers to maintain privacy. In
+            addition, several airlines provide shuttle services, check-ins, to a
+            variety of luxurious and complete meals.
+          </h5>
+        </section>
+
+        <section class="partner">
+          <h3 class="bold">Airline Partners</h3>
+          <h5>
+            With various partner airlines, we are ready to fly you anywhere and
+            <br />
+            make your vacation dreams come true.
+          </h5>
+          <div class="partner-logo">
+            <div class="row">
+              <img src="img/airline/garuda.webp" alt="Garuda" />
+              <img src="img/airline/batik.webp" alt="Batik Air" />
+              <img src="img/airline/citilink.webp" alt="Citilink" />
+              <img src="img/airline/sriwijaya.webp" alt="Sriwijaya" />
+              <img src="img/airline/japanair.webp" alt="Japan AirLine" />
+              <img src="img/airline/american.webp" alt="American Airline" />
+              <img src="img/airline/airasia.webp" alt="Airasia" />
+              <img src="img/airline/singapore.webp" alt="Singapore Airline" />
+            </div>
+            <div class="row">
+              <img src="img/airline/koreanair.webp" alt="Korean Airline" />
+              <img src="img/airline/chinaair.webp" alt="China Airline" />
+              <img src="img/airline/emirates.webp" alt="Emirates" />
+              <img src="img/airline/jet.webp" alt="jet" />
+              <img src="img/airline/philiphines.webp" alt="philiphines" />
+              <img src="img/airline/vietnam.webp" alt="Vietnam" />
+              <img src="img/airline/brunei.webp" alt="brunei" />
+              <img src="img/airline/allnippon.webp" alt="All Nippon" />
+            </div>
+          </div>
+        </section>
+
+        <section class="payment">
+          <h3 class="bold">Payment Methods</h3>
+          <h5>
+            With various payment methods, you can choose
+            <br />
+            the method of payment as you wish Easy
+          </h5>
+          <div class="payment-logo">
+            <div class="row">
+              <img src="img/payment/bca.webp" alt="BCA" />
+              <img src="img/payment/mandiri.webp" alt="Mandiri" />
+              <img src="img/payment/bni.webp" alt="BNI" />
+              <img src="img/payment/bri.webp" alt="BRI" />
+              <img src="img/payment/visa.webp" alt="Visa" />
+              <img src="img/payment/mastercard.webp" alt="Mastercard" />
+              <img src="img/payment/atmbersama.webp" alt="ATM Bersama" />
+              <img src="img/payment/alto.webp" alt="Alto" />
+            </div>
+            <div class="row">
+              <img src="img/payment/prima.webp" alt="Prima" />
+              <img src="img/payment/bcaklik.webp" alt="BCAKlikPlay" />
+              <img src="img/payment/mandiridebit.webp" alt="Mandiri Debit" />
+              <img
+                src="img/payment/mandiriclick.webp"
+                alt="Mandiri ClickPLay"
+              />
+              <img src="img/payment/indomaret.webp" alt="Indomaret" />
+              <img src="img/payment/alfamart.webp" alt="Alfamart" />
+              <img src="img/payment/alfamidi.webp" alt="Alfamidi" />
+            </div>
+          </div>
+        </section>
+
+        <section class="faq">
+          <h3 class="bold">
+            <span>FAQ</span> (Frequently Asked Question) <br />
+            about ordering airplane tickets
+          </h3>
+          <div class="faq-content">
+            <div id="question" class="header">
+              <h4 class="bold">How do I book a ticket in Trafellas?</h4>
+              <i class="fa-solid fa-circle-chevron-down"></i>
+            </div>
+            <p id="faq-desc" class="faq-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque,
+              quos doloremque. Eum distinctio, sint eligendi reiciendis ipsa
+              ullam exercitationem sapiente!
+            </p>
+          </div>
+          <div class="faq-content">
+            <div id="question" class="header">
+              <h4 class="bold">
+                Can I make changes to my booking after it's been confirmed?
+              </h4>
+              <i class="fa-solid fa-circle-chevron-down"></i>
+            </div>
+            <p id="faq-desc" class="faq-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque,
+              quos doloremque. Eum distinctio, sint eligendi reiciendis ipsa
+              ullam exercitationem sapiente!
+            </p>
+          </div>
+          <div class="faq-content">
+            <div id="question" class="header">
+              <h4 class="bold">How can I find the best deals on Trafellas?</h4>
+              <i class="fa-solid fa-circle-chevron-down"></i>
+            </div>
+            <p id="faq-desc" class="faq-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque,
+              quos doloremque. Eum distinctio, sint eligendi reiciendis ipsa
+              ullam exercitationem sapiente!
+            </p>
+          </div>
+          <div class="faq-content">
+            <div id="question" class="header">
+              <h4 class="bold">
+                What should I do if I encounter an issue during the booking
+                process?
+              </h4>
+              <i class="fa-solid fa-circle-chevron-down"></i>
+            </div>
+            <p id="faq-desc" class="faq-desc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque,
+              quos doloremque. Eum distinctio, sint eligendi reiciendis ipsa
+              ullam exercitationem sapiente!
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="text">
+          <img src="img/logo.png" alt="logo" />
+          <h5>
+            Find Your Dream Adventure <br />by Ticket Ordering <br />
+            Easy and Fast Transportation!
+          </h5>
+          <h4>Call Center</h4>
+          <h5>0802 3200 212 <br />(Indonesia Only) <br />+6281 3264 0222</h5>
+        </div>
+        <div class="page">
+          <div class="page1">
+            <h4>Company</h4>
+            <h5>About</h5>
+            <h5>Career</h5>
+            <h5>Partner Help</h5>
+            <h5>Customer Service</h5>
+          </div>
+          <div class="page2">
+            <h4>Product</h4>
+            <h5>Flight</h5>
+            <h5>Train</h5>
+            <h5>Stay</h5>
+          </div>
+          <div class="page3">
+            <h4>Support</h4>
+            <h5>Support Center</h5>
+            <h5>Privacy Statement</h5>
+            <h5>Terms & Condition</h5>
+          </div>
+        </div>
+        <div class="download">
+          <h4>Get Trafellas App</h4>
+          <img src="img/playstore.webp" alt="playstore" />
+          <img src="img/appstore.webp" alt="appstore" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="dist/js/accordion.js"></script>
+    <script src="dist/js/carousel.js"></script>
+  </body>
+</html>
